@@ -130,7 +130,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        // Torch.switchState(true)
+        // Torch.switchState(true);
         let viewAppearCallBack = (event) => {
             this.setTimeout(() => {
                 this.setState({
