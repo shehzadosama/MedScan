@@ -1,10 +1,12 @@
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Share} from 'react-native';
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View, Share } from 'react-native';
 
 import Home from './src/views/Home';
 import History from './src/views/History';
 import Config from './src/views/Config';
 import More from './src/views/More';
+import Main from './src/views/Main';
+
 
 import * as global from './src/global'
 import {
@@ -18,9 +20,11 @@ const MainStack = createStackNavigator(
     Config,
     History,
     More,
+    Main
   },
   {
-    initialRouteName: "Home",
+    // initialRouteName: "Home",
+    initialRouteName: "Main",
     defaultNavigationOptions: {
       header: null
     },
@@ -39,15 +43,15 @@ export default class App extends Component<Props> {
     const AppContainer = createAppContainer(MainStack);
 
     return (
-      <AppContainer/>
+      <AppContainer />
     );
   }
 
   componentDidMount = () => {
     global.loadAppData().then(() => {
-      this.setState({loaded: true})
+      this.setState({ loaded: true })
     }).catch(e => {
-      this.setState({loaded: true})
+      this.setState({ loaded: true })
       console.log(e.message);
     });
   }

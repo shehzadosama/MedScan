@@ -5,6 +5,7 @@ import {
     View,
     Vibration,
     Text,
+    Dimensions
 } from 'react-native'
 
 import Barcode from 'react-native-smart-barcode'
@@ -17,7 +18,10 @@ import { IconButton } from '../components/Buttons'
 import * as global from '../global'
 import moment from 'moment';
 import { RNCamera } from 'react-native-camera';
-import Torch from 'react-native-torch';
+// import Torch from 'react-native-torch';
+// import RNBeep from 'react-native-a-beep';
+
+const { height, width } = Dimensions.get('window');
 
 const styles = {
     overlayView: {
@@ -52,6 +56,13 @@ const styles = {
         marginBottom: 10,
         paddingHorizontal: 15,
     },
+    cameraContainer: {
+        position: 'absolute',
+        width: width,
+        height: height,
+        top: 0,
+        left: 0
+    },
 }
 
 class Home extends Component {
@@ -64,6 +75,7 @@ class Home extends Component {
         timestamp: '',
     }
 
+
     constructor(props) {
         super(props);
         this.state = {
@@ -72,7 +84,6 @@ class Home extends Component {
             loading: false,
         };
 
-
         this.requestPermissions(['camera', 'location']);
     }
 
@@ -80,12 +91,12 @@ class Home extends Component {
         return (
             <View style={{ flex: 1, backgroundColor: 'black' }}>
                 {this.state.viewAppear ?
-            
-                        <Barcode style={{ flex: 1, }}
-                            scannerLineInterval={0}
-                            ref={component => this._barCode = component}
-                            onBarCodeRead={this._onBarCodeRead} />
-                : null}
+                    <Barcode style={{ flex: 1, }}
+                        scannerLineInterval={0}
+                        ref={component => this._barCode = component}
+                        onBarCodeRead={this._onBarCodeRead} />
+
+                    : null}
                 <View style={styles.overlayView}>
                     <View style={styles.header}>
                         <Text style={{ color: "#00DD00", fontSize: 24 }}>
@@ -131,6 +142,8 @@ class Home extends Component {
 
     componentDidMount() {
         // Torch.switchState(true);
+        RNCamera.Constants.FlashMode.torch
+
         let viewAppearCallBack = (event) => {
             this.setTimeout(() => {
                 this.setState({
@@ -148,11 +161,14 @@ class Home extends Component {
 
     componentWillUnmount() {
         this._listeners && this._listeners.forEach(listener => listener.remove());
-        this._onFocusListener.remove();
+        // this._onFocusListener.remove();
     }
 
     _onBarCodeRead = (e) => {
         // console.log(`e.nativeEvent.data.type = ${e.nativeEvent.data.type}, e.nativeEvent.data.code = ${e.nativeEvent.data.code}`)
+        // RNBeep.beep()
+        // RNBeep.PlaySysSound(RNBeep.AndroidSoundIDs.TONE_CDMA_ONE_MIN_BEEP)
+
         this._stopScan()
         Vibration.vibrate(200);
         this.detection = {

@@ -3,7 +3,8 @@ package com.medscan;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.cubicphuse.RCTTorch.RCTTorchPackage;
+// import com.reactlibrary.RNReactNativeABeepPackage;
+// import com.cubicphuse.RCTTorch.RCTTorchPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.horcrux.svg.SvgPackage;
 import com.reactnativecomponent.barcode.RCTCapturePackage;
@@ -31,7 +32,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new RCTTorchPackage(),
+            // new RNReactNativeABeepPackage(),
+            // new RCTTorchPackage(),
             new VectorIconsPackage(),
             new SvgPackage(),
             new RCTCapturePackage(),

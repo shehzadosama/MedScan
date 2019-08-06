@@ -67,6 +67,7 @@
 		8488856A32AA4251A1FC1D3D /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E8AA4C5EED4727B00177A6 /* libRNVectorIcons.a */; };
 		4D63D9927A5D4B2492EE9D4B /* libRNVectorIcons-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD70A216A9545B1A4643C91 /* libRNVectorIcons-tvOS.a */; };
 		298BD621E30C4E3AB23B1BAA /* libRCTTorch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A3C3D2E8114A7DA6871874 /* libRCTTorch.a */; };
+		F28373D2130B4385B732CD60 /* libRNReactNativeABeep.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EECEB0D0EB20432294DBBDCE /* libRNReactNativeABeep.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -411,6 +412,8 @@
 		FBD70A216A9545B1A4643C91 /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; name = "libRNVectorIcons-tvOS.a"; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		5E22F610EA97424DB9385652 /* RCTTorch.xcodeproj */ = {isa = PBXFileReference; name = "RCTTorch.xcodeproj"; path = "../node_modules/react-native-torch/ios/RCTTorch.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		A3A3C3D2E8114A7DA6871874 /* libRCTTorch.a */ = {isa = PBXFileReference; name = "libRCTTorch.a"; path = "libRCTTorch.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		62A5616C769749059DA1FF9B /* RNReactNativeABeep.xcodeproj */ = {isa = PBXFileReference; name = "RNReactNativeABeep.xcodeproj"; path = "../node_modules/react-native-a-beep/ios/RNReactNativeABeep.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		EECEB0D0EB20432294DBBDCE /* libRNReactNativeABeep.a */ = {isa = PBXFileReference; name = "libRNReactNativeABeep.a"; path = "libRNReactNativeABeep.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +451,7 @@
 				FD31949EBAB045F58B7139A1 /* libRNSVG.a in Frameworks */,
 				8488856A32AA4251A1FC1D3D /* libRNVectorIcons.a in Frameworks */,
 				298BD621E30C4E3AB23B1BAA /* libRCTTorch.a in Frameworks */,
+				F28373D2130B4385B732CD60 /* libRNReactNativeABeep.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +653,7 @@
 				DB1CC436957547E68F5AE213 /* RNSVG.xcodeproj */,
 				535267D6B045423EB3951A10 /* RNVectorIcons.xcodeproj */,
 				5E22F610EA97424DB9385652 /* RCTTorch.xcodeproj */,
+				62A5616C769749059DA1FF9B /* RNReactNativeABeep.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1329,6 +1334,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1341,6 +1347,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-svg\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
+					"$(SRCROOT)/../node_modules/react-native-a-beep/ios",
 				);
 			};
 			name = Debug;
@@ -1374,6 +1381,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1386,6 +1394,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-svg\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
+					"$(SRCROOT)/../node_modules/react-native-a-beep/ios",
 				);
 			};
 			name = Release;
@@ -1417,6 +1426,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-svg\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
+					"$(SRCROOT)/../node_modules/react-native-a-beep/ios",
 				);
 			};
 			name = Debug;
@@ -1447,6 +1457,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-svg\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
+					"$(SRCROOT)/../node_modules/react-native-a-beep/ios",
 				);
 			};
 			name = Release;
@@ -1488,6 +1499,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1500,6 +1512,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-svg\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
+					"$(SRCROOT)/../node_modules/react-native-a-beep/ios",
 				);
 			};
 			name = Debug;
@@ -1541,6 +1554,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1553,6 +1567,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-svg\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
+					"$(SRCROOT)/../node_modules/react-native-a-beep/ios",
 				);
 			};
 			name = Release;
@@ -1593,6 +1608,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1605,6 +1621,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-svg\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
+					"$(SRCROOT)/../node_modules/react-native-a-beep/ios",
 				);
 			};
 			name = Debug;
@@ -1645,6 +1662,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1657,6 +1675,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-svg\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
+					"$(SRCROOT)/../node_modules/react-native-a-beep/ios",
 				);
 			};
 			name = Release;

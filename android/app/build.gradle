@@ -150,7 +150,8 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-torch')
+    // implementation project(':react-native-a-beep')
+    // implementation project(':react-native-torch')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-svg')
     implementation project(':react-native-smart-barcode')
